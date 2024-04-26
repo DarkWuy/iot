@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Roman Herold",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "board-ssd1306", "id": "oled2", "top": -22.07, "left": -138.43, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "oled2:GND", "esp:GND.1", "black", [ "v-21.9", "h230.42", "v29.48" ] ],
+    [ "oled2:VCC", "esp:3V3", "red", [ "v-32.56", "h223.1", "v3.91" ] ],
+    [ "oled2:SCL", "esp:D22", "green", [ "v-52.8", "h226.08", "v21.66" ] ],
+    [ "oled2:SDA", "esp:D21", "green", [ "v-65.23", "h193.52", "v143.84" ] ]
+  ]
+}
